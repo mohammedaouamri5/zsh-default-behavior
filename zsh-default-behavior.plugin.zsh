@@ -17,7 +17,7 @@ echo "bruh"
 # Hook that runs before a command is executed
 preexec () {
     LAST_COMMAND="$1"
-    eval "$($HOME/DEV/tools/zsh-default-behavior/main $LAST_COMMAND)"
+    eval "$($ZSH_CUSTOM/plugins/zsh-default-behavior/main $LAST_COMMAND)"
     kill -INT $$
     return  1 
 }
@@ -28,4 +28,5 @@ precmd () {
 
 autoload -Uz add-zsh-hook
 
+m 
 
