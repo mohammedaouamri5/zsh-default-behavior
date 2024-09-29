@@ -2,6 +2,13 @@ package main
 
 import "regexp"
 
+
+// WARNING : You Have To Re-Complile when you change the config 
+
+
+
+
+
 // make sure that That one and only ine  function will be fired
 // by fired i mean will call Run
 // because you can make tow default commend for the same function
