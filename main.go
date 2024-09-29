@@ -7,6 +7,11 @@ import (
 	"sync"
 )
 
+
+// This Function will run the command and exit 
+// It look like kt just print the command 
+// but if you look to the shell sqript
+// you will see that the Im wraping the command with `eval` 
 func Run(args ...interface{}) {
 	fmt.Println(args...)
 	os.Exit(0)
@@ -27,6 +32,8 @@ func GetAtStart(commend string) {
 		}()
 	}
 	wg.Wait()
+	// if None Of The Above
+	Run(commend)
 }
 
 func GetAtEnd(commend string, errcode string) {
