@@ -33,7 +33,7 @@ func (Start) IsGithubRipo(commend string) {
 	re := regexp.MustCompile(ssh)
 
 	if re.MatchString(commend) {
-		Run("git clone ", commend)
+		Run("git clone --recursive ", commend)
 	}
 }
 
